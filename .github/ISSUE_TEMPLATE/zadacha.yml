@@ -1,0 +1,38 @@
+name: Задача
+description: Една работа с ясен резултат (до един вторник)
+body:
+  - type: textarea
+    id: kakvo
+    attributes:
+      label: Какво трябва да се направи
+      placeholder: Добави функция, която оставя само измервания с QC флаг 1 и 2.
+    validations:
+      required: true
+  - type: textarea
+    id: gotovo
+    attributes:
+      label: Готово е, когато
+      value: |
+        - [ ] Кодът работи върху примерните данни
+        - [ ] Има поне 3 теста
+        - [ ] README е обновен
+    validations:
+      required: true
+  - type: dropdown
+    id: nivo
+    attributes:
+      label: Ниво
+      options:
+        - A
+        - B
+        - C
+  - type: dropdown
+    id: razmer
+    attributes:
+      label: Размер
+      options:
+        - S (до 1 ч.)
+        - M (до 2 ч.)
+  - type: markdown
+    attributes:
+      value: Ако задачата чака друга, след създаването избери Relationships → Mark as blocked by.
