@@ -1,0 +1,55 @@
+name: Корабен дневник (топка)
+description: Предаване на готов резултат между X и XI клас
+title: "Топка: "
+body:
+  - type: dropdown
+    id: ekipazh
+    attributes:
+      label: Екипаж
+      options:
+        - Пенелопа
+        - Тирезий
+        - Демодок
+    validations:
+      required: true
+  - type: dropdown
+    id: posoka
+    attributes:
+      label: Посока (добави и етикета със същата посока)
+      options:
+        - X → XI
+        - XI → X
+    validations:
+      required: true
+  - type: textarea
+    id: gotovo
+    attributes:
+      label: Какво е готово
+    validations:
+      required: true
+  - type: textarea
+    id: start
+    attributes:
+      label: Как се стартира
+      placeholder: python penelope/guard.py data/sample/profile_01.csv
+    validations:
+      required: true
+  - type: textarea
+    id: problemi
+    attributes:
+      label: Какво не работи / въпроси
+  - type: textarea
+    id: sledva
+    attributes:
+      label: Какво предлагаме да се направи след това
+  - type: checkboxes
+    id: gotovo-flot
+    attributes:
+      label: „Готово“ за Флота
+      options:
+        - label: Има README
+          required: true
+        - label: Има пример за стартиране
+          required: true
+        - label: Има поне 3 теста
+          required: true
